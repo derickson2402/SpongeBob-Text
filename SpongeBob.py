@@ -4,9 +4,7 @@ usr_in = input()
 limit = len(usr_in)
 character = 0
 
-
 #Define the even/odd function
-
 def SpongeBob():
     #Using the global variables
     global usr_in
