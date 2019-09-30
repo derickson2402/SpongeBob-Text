@@ -6,7 +6,7 @@ This program is really useless
 
 Becomes:
 
-tHiS pRoGrAm Is ReAlLy useless
+tHiS pRoGrAm Is ReAlLy UsElEsS
 
 
 
