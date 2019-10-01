@@ -1,27 +1,27 @@
-#Collect the user input and define length
+#The function should start at the very beginning, a very good place to start
+char_num = 0
 
-usr_in = input()
-limit = len(usr_in)
-character = 0
+#Collect the user input and return it
+usr_in = input("\n\nPlease enter your text and press RETURN\n\n")
+print("\nYou said:", '\n\n', usr_in, end='\n\n')
 
-#Define the even/odd function
-def SpongeBob():
-    #Using the global variables
-    global usr_in
-    global limit
-    global character
+#Define the length of the phrase and return the length
+char_lim = len(usr_in)
+print("There are ", char_lim, " characters.", end='\n\n')
+print("Here's your new meme:", end='\n\n')
 
-    #Checking for even or odd
-    #I shouldn't have to define global variable again
-    if ((character % 2) == 0):
-        print(usr_in.lower()[character])
-        character+1
-    else:
-        print(usr_in.capitalize()[character])
-        character+1
+#Define the function, which will determine if the letter place is even or odd,
+# and alter the case accordingly
+def SpongeBob(letter, place):
+    return(letter.lower() if ((place % 2) ==0) else letter.capitalize())
 
-#function SpongeBob should be defined by now
-#every other letter should capitalize
+#As long as the character number has not reached, then the function SpongeBob
+# should return each sequential letter in order.
+while (char_lim != char_num):
+    x = SpongeBob(usr_in[char_num], char_num)
+    print(x, end='')
+    char_num = (char_num+1)
+print('\n\n', end='')
 
-while (limit != character):
-    SpongeBob()
+#End the function and say goodbye
+print("Thanks for using my program!\n")
