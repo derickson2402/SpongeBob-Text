@@ -1,3 +1,8 @@
+#!/home/derickson/Projects/SpongeBob/SpongeBob.py
+import random
+for x in range(10):
+    print random.random(1,101)
+
 #The function should start at the very beginning, a very good place to start
 char_num = 0
 
@@ -12,9 +17,10 @@ print("There are ", char_lim, " characters.", end='\n\n')
 #Determine if the user wants random letters or sequential. Just checks for the
 #letter "r" after making it all lowercase
 function_type = input("Would you like to flip every other letter or go randomly?\n\n")
+print(end='\n\n')
 function_type = function_type.lower()
 function_type = ("random" if ("r" in(function_type)) else "sequential")
-print("You picked ", function_type, "\n\n")
+print("You picked ", function_type, end="\n\n")
 
 #Define the function, which will determine if the letter index is even or odd,
 # and alter the case accordingly
@@ -26,19 +32,18 @@ def Random_Letter(letter):
     random_float = random()
     return(letter.lower() if ((random_float % 2) ==0) else letter.capitalize())
     print(random_float)
-print(random_float)
 
 #As long as the character number has not reached, then the function SpongeBob
 # should return each sequential letter in order.
 print("Here's your new meme:", end='\n\n')
 
-while (char_lim != char_num, function_type = sequential):
+while (char_lim != char_num and function_type == "sequential"):
     x = SpongeBob_Letter(usr_in[char_num], char_num) #char_num becomes index for function
     print(x, end='')
     char_num += 1
 
 #Same While loop but for the randomized function
-while (char_lim != char_num, function_type = random):
+while (char_lim != char_num and function_type == "random"):
     y = Random_Letter(usr_in[char_num])
     print(y, end='')
     char_num += 1
