@@ -58,10 +58,10 @@ def Collect_Number(num_in):
 
 def Biggest_Multiple_of_2(num_in):
     multiple = 0
-    status = "incomplete"
-    while(status == "incomplete"):
+    fun_status = "incomplete"
+    while(fun_status == "incomplete"):
         if(num_in/(2**multiple) < 1):
-            status = "complete"
+            fun_status = "complete"
             multiple -= 1
         else:
             multiple += 1
@@ -70,12 +70,9 @@ def Biggest_Multiple_of_2(num_in):
 def Dec_to_Bin(Dec_num):
     status = "incomplete"
     Running_Binary_Sum = 0
-    while(status == "incomplete"):
-        if(Biggest_Multiple_of_2(Dec_num) == "0"):
-            status = "complete"
-        else:
-            Running_Binary_Sum += 10**(Biggest_Multiple_of_2(Dec_num)+1)
-            Dec_num -= 2**(Biggest_Multiple_of_2(Dec_num))
+    while(Dec_num != 0):
+        Running_Binary_Sum += 10**(Biggest_Multiple_of_2(Dec_num))
+        Dec_num -= 2**(Biggest_Multiple_of_2(Dec_num))
     return(Running_Binary_Sum)
 
 Convert_type = Which_Conversion(input("would you like to convert 1) Binary to Decimal or 2) Decimal to Binary?\n\n"))
